@@ -1,14 +1,19 @@
 以下のサイトの通りに運用する。
 https://qiita.com/m-masaki72/items/7ba34e31d9f08662f1ee
 
+
 【新規ライブラリインストール時】
 １，req.txtを出力
 $ pip list
 $ pip freeze > req.txt
+２，リモートリポジトリにプッシュ
 
-２，リモートリポジトリに反映
-
-
-【クローン時】
-１，req.txtからpipでパッケージを入れる
+【別PCで同期時】
+１，リモートリポジトリからプル
+２，req.txtからpipでパッケージを入れる
 $ pip install -r req.txt
+
+【新規PCにクローン時】
+１，venvで仮想環境作成
+$ python -m venv PyEnv312
+２，【同期時】の手順を実施
